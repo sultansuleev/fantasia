@@ -8,7 +8,7 @@ export default class SecondContainer extends Component {
 
     render(){
         return(
-            <div className="s-content" >
+            <div className="s-content" id="scroll-Obj">
                 <div className="s-body">
                     <div className="up-s">
                         <div className="text">

@@ -7,7 +7,6 @@ class Main extends Component {
         return(
             <Switch>
                 <Route exact path="/" render={() => <Home/>}/>
-
             </Switch>
         );
     }

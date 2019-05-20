@@ -11,7 +11,7 @@ const Fourth = lazy(() => import("./FourthContainer"));
 export default class Home extends Component {
     render() {
         return(
-            <div>
+            <main>
                 <First/>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Second/>
@@ -22,7 +22,7 @@ export default class Home extends Component {
                 <Suspense fallback={<div>Loading...</div>}>
                     <Fourth/>
                 </Suspense>
-            </div>
+            </main>
         );
     }
 }

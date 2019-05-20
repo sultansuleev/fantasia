@@ -1,0 +1,85 @@
+header {
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    padding: 1em;
+    transition: 1s ease-in-out;
+
+}
+
+.head-body {
+    width: 77%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+    grid-column-gap: 18em;
+}
+
+.logo {
+    text-transform: uppercase;
+}
+
+.logo > h1 {
+    border-bottom: 1px solid #fff;
+}
+
+.h-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+
+}
+
+ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 23px;
+    transition: 1s ease;
+}
+
+
+#soc-icon {
+    width: 1em;
+    filter: invert(100%);
+    transition: .5s ease-in-out;
+}
+
+li a:hover {
+    transition: .5s ease;
+    filter: invert(50%);
+}
+
+
+@media only screen and (max-width: 1500px) {
+    .head-body {
+        grid-column-gap: 17em;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+    .head-body {
+        grid-column-gap: 11em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

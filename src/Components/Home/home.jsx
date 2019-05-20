@@ -1,6 +1,8 @@
 import React, {Component, Suspense, lazy} from 'react';
-import First from "./FirstContainer";
+import {Helmet} from 'react-helmet';
 import './home.css';
+import First from "./FirstContainer";
+
 
 const Second = lazy(() => import("./SecondContainer"));
 const Third = lazy(() => import("./ThirdContainer"));
@@ -12,6 +14,9 @@ export default class Home extends Component {
     render() {
         return(
             <main>
+                <Helmet>
+                    <title>Home</title>
+                </Helmet>
                 <First/>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Second/>

@@ -199,7 +199,15 @@ h1 {
     }
 
     .s-body {
-        width: 70%;
+        width: 84%;
+    }
+
+    .th-body {
+        width: 84%;
+    }
+
+    .fr-body {
+        width: 84%;
     }
 
     .up-s {

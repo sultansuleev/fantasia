@@ -38,9 +38,9 @@ export default class Sidebar extends Component {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="#">
+                                    <a href="https://www.linkedin.com/in/%D1%81%D1%83%D0%BB%D1%82%D0%B0%D0%BD-%D1%81%D1%83%D0%BB%D0%B5%D0%B5%D0%B2-1616a3162/" rel="noopener noreferrer"  target="_blank">
                                         <img src="/assets/social/svg/linkedIn.svg" alt=""/>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
                                     <Link to="#">

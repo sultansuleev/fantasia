@@ -37,15 +37,19 @@ h4 {
 
 .widget {
     margin-top: 2em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .sub-widget {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 1em;
+}
+
+.follow {
+    margin-right: 1em;
 }
 
 .widget-icon li  a  img {
@@ -104,6 +108,7 @@ h4 {
     color: rgb(145, 145, 145);
     flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
 }
 
 .copyright-content address a{
@@ -121,10 +126,11 @@ h4 {
 
 @media only screen and (max-width: 1200px) {
     .widget {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 0;
-        grid-column-gap: 0;
-        grid-row-gap: 1em;
+        flex-direction: column;
+    }
+
+    .follow {
+        margin-right: 0;
     }
 }
 

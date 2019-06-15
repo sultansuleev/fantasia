@@ -41,14 +41,13 @@ ul {
     flex-direction: row;
     list-style: none;
     justify-content: space-around;
-
 }
 
 ul > li > a {
     color: inherit;
     text-decoration: none;
     font-size: 23px;
-    transition: 1s ease;
+    transition: 1s ease-in-out;
 }
 
 
@@ -77,6 +76,7 @@ li a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
+
     .head-body {
         grid-column-gap: 0;
         width: 84%;

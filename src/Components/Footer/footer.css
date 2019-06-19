@@ -13,12 +13,12 @@ footer {
 }
 
 .sidebar {
-    width: 45%;
     margin: 0 auto;
     font-size: 16px;
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
 h4 {
@@ -33,6 +33,7 @@ h4 {
 
 .sidebar-content {
     padding: 3em;
+    width: 36%;
 }
 
 .widget {
@@ -43,9 +44,8 @@ h4 {
 }
 
 .sub-widget {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .follow {
@@ -132,8 +132,17 @@ h4 {
     .follow {
         margin-right: 0;
     }
+
+    .sidebar-content {
+        width: 89%;
+    }
+
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 520px) {
 
+
+    .widget-icon {
+        flex-direction: column;
+    }
 }

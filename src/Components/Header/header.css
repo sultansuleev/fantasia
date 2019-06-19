@@ -1,7 +1,7 @@
 header {
     background: rgba(0, 0, 0, 0);
     width: 100%;
-    height: 5em;
+    height: auto;
     position: fixed;
     top: 0;
     z-index: 9;
@@ -14,11 +14,12 @@ header {
 
 .head-body {
     width: 77%;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: .2fr 1fr;
     grid-column-gap: 18em;
+    position: relative;
 }
 
 .logo {
@@ -29,18 +30,33 @@ header {
     border-bottom: 1px solid #fff;
 }
 
-.h-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+nav {
+    display: block;
+}
+
+.nav-active {
+    display: block;
+}
+
+.nav-active .menu {
+    display: block;
+}
+
+.nav-active .menu li a {
+    margin: 0;
 }
 
 ul {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: space-around;
+}
+
+li {
+    margin: auto;
 }
 
 ul > li > a {
@@ -50,6 +66,25 @@ ul > li > a {
     transition: 1s ease-in-out;
 }
 
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+.menu-active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+.menu-soc {
+    width: 20%;
+    margin: auto;
+}
 
 #soc-icon {
     width: 1em;
@@ -62,27 +97,134 @@ li a:hover {
     filter: invert(50%);
 }
 
+.toggle .line-1 {
+    transform: rotate(-45deg) translate(-.9em, 0.7em);
+}
 
-@media only screen and (max-width: 1500px) {
+.toggle .line-2 {
+    transform: translateX(4em);
+    opacity: 0;
+}
+
+.toggle .line-3 {
+    transform: rotate(45deg) translate(-0.6em, -0.3em);
+}
+
+.burger-op {
+    top: 0 !important;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes burgerOpen {
+    from {
+
+    }
+    to {
+
+    }
+}
+
+@media only screen and (min-width: 1500px) {
     .head-body {
         grid-column-gap: 17em;
     }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1500px){
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
     .head-body {
-        grid-column-gap: 4em;
+        grid-column-gap: 5em;
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px)  {
+    header {
+        text-align: center;
+    }
 
     .head-body {
-        grid-column-gap: 0;
         width: 84%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    ul li {
+        margin: .5em 0;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-soc {
+        width: 50%;
+    }
+
+    .burger {
+        width: 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 1%;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 91%;
+        height: 6px;
+        margin: 4px auto;
+        background: #ffffff;
+        transition: all ease-in .3s;
+    }
+
+}
+
+@media only screen and (max-width : 768px) {
+}
+
+@media only screen and (max-width : 480px) {
+    .logo > h1 {
+        font-size: 35px;
+    }
+
+    .burger {
+        width: 3em;
+        top: 3%;
     }
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 360px) {
+    .logo > h1 {
+        font-size: 28px;
+    }
 
+    .burger {
+        top: 9%;
+    }
+
+    .burger div {
+        width: 80%; height: 5px;
+        margin: 2px auto;
+    }
+
+    .toggle .line-1 {
+        transform: rotate(-45deg) translate(-0.4em, 0.6em)
+    }
+
+    .toggle .line-3 {
+        transform: rotate(45deg) translate(-0.2em, -0.3em)
+    }
 }

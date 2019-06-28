@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 export default class Sidebar extends Component {
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return false;
+    }
+
     render() {
         return(
             <div className="sidebar">

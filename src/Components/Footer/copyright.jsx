@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
 export default class Copyright extends Component {
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return false;
+    }
+
     render() {
         return(
             <div className="footer-content copyright">

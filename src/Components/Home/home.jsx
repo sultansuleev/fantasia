@@ -11,6 +11,10 @@ const Fourth = lazy(() => import("./FourthContainer"));
 
 
 export default class Home extends Component {
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return false;
+    }
+
     render() {
         return(
             <main>

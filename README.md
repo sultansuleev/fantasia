@@ -4,7 +4,7 @@ My simple project that I created when I was interested in a restaurants
 
 ## Programming Languages
 
-- Html, CSS and JS
+- HTML, CSS and JS
 - ReactJS
 
 ## Components
